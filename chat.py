@@ -104,6 +104,10 @@ while True:
                             id = event.chat_id
                             chat_mess_send('https://vk.com/tyty.blet2')
 
+                        if event.obj['text'].lower() == 'макимка' :
+                            id = event.chat_id
+                            chat_mess_send('https://vk.com/playersuknowns')
+
                         if event.obj['text'].lower()=='он лох':
                             id = event.chat_id
                             print(id)
