@@ -17,7 +17,7 @@ import requests
 session = requests.Session()
 vk_session = vk_api.VkApi(token="064e5aeb55fb8062b5c4db6859c1645785dc52df21bdb82867fbafbff4dcd5e6a45fdbb16473781658bf5")
 
-longpoll = VkBotLongPoll(vk_session,181452959)
+longpoll = VkBotLongPoll(vk_session, 181452959)
 vk = vk_session.get_api()
 
 image = "D:/Program Files/programming/pythonProject/8lRtGJ0Cl9I.jpg"
