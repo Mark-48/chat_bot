@@ -55,6 +55,7 @@ def chat_mess_send(txt):
 
 def security_msg(txt):
     vk.messages.send(random_id=random.randint(1,1234567989),user_id=166034972,message=txt)
+
 print('bot activated...')
 
 
