@@ -62,17 +62,25 @@ print('bot activated...')
 while True:
 
         for event in longpoll.listen():
+
             if event.type == VkBotEventType.MESSAGE_NEW:
+
                 txt=event.object['text']
                 user_id=event.obj['from_id']
+
                 print('---------------')
                 print(event.object)
+
                 if event.obj['text']:
+
                         word_sticker = event.obj['text'].lower().split()
+
                         for word in word_sticker:
+
                             if word == 'туц':
                                 id = event.chat_id
                                 send_sticker(13918)
+
                             else :
                                 break
                 try:
@@ -113,12 +121,15 @@ while True:
                             print(id)
                             chat_mess_send("не, ну тут даже я согласен")
                             chat_mess_send("та еще сволочь")
+
                         elif event.obj['text'].lower() == 'егорка':
                             id = event.chat_id
                             send_sticker(65965)
+
                         elif event.obj['text'].lower() == 'димка':
                             id = event.chat_id
                             chat_mess_send('и')
+
                         elif event.obj['text'].lower() == 'тут':
                             id = event.chat_id
                             chat_mess_send('ТУТу')
@@ -127,9 +138,11 @@ while True:
                             id = event.chat_id
                             chat_mess_send('卐卐卐卐卐卐卐卐卐卐卐卐')
                             chat_mess_send('ой')
+
                         elif event.obj['text'].lower() == 'дискорд' or event.obj['text'].lower() == 'бебра' :
                             id = event.chat_id
                             chat_mess_send('ого, как ты узнал!!? во, держи - https://discord.gg/MeXpc2nT')
+
                         if event.obj['text'].lower()=='да':
                             id = event.chat_id
                             send_photo_mem('photo-178284437_457239477')
@@ -144,16 +157,20 @@ while True:
                             send_sticker(51578)
 
                         elif event.obj['attachments'][0]['type'] == 'sticker':
+
                             if event.obj['attachments'][0]['sticker']['sticker_id'] == 15292 or event.obj['attachments'][0]['sticker']['sticker_id'] == 57714 or event.obj['attachments'][0]['sticker']['sticker_id'] == 65756 :
+
                                 print(event.obj['attachments'][0]['sticker']['sticker_id'])
                                 id = event.chat_id
                                 send_sticker(15292)
 
                         elif event.obj['text'].lower()=='ого':
+
                             id = event.chat_id
                             chat_mess_send('ага')
 
                         elif event.obj['text'].lower() == 'ага':
+
                             id = event.chat_id
                             chat_mess_send('в жопе нога')
 
